@@ -3,11 +3,11 @@
 
 function calcularDisponible(ingresos, egresos){
 
-let disponible = ingresos - egresos;
-if(disponible < 0){
-disponible = 0;
+    let disponible = ingresos - egresos;
+        if(disponible < 0){
+       disponible = 0;
 }
-return disponible;
+       return disponible;
 }
 
 
@@ -24,4 +24,9 @@ function texto (id,vari){
 let texto1 = document.getElementById(id);
 texto1.innerText=vari.toFixed(2);
 
+}
+
+function calcularInteresSimple(monto,tasa,plazoAnios){
+    let interes = monto * (tasa/100) * plazoAnios;
+    return interes;
 }
