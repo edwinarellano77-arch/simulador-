@@ -20,4 +20,8 @@ texto("spnInteresPagar",interesSimple);
 //CALCULAR TOTAL PRESTAMO
 let valorPagar = calcularTotalPagar(monto,interesSimple);
 texto("spnTotalPrestamo",valorPagar)
+
+// CALCULAR CUOTA MENSUAL
+let cuota = calcularCuotaMensual(valorPagar,plazo);
+texto("spnCuotaMensual",cuota);
 }
