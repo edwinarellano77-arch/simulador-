@@ -24,4 +24,13 @@ texto("spnTotalPrestamo",valorPagar)
 // CALCULAR CUOTA MENSUAL
 let cuota = calcularCuotaMensual(valorPagar,plazo);
 texto("spnCuotaMensual",cuota);
+
+//APROBAR CREDITO
+let aprobar = aprobarCredito(capasidadDePago,cuota);
+
+if(aprobar == true){
+    document.getElementById("spnEstadoCredito").innerText = "CREDITO APROBADO";
+} else {
+    document.getElementById("spnEstadoCredito").innerText = "CREDITO RECHAZADO";
+}
 }
