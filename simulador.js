@@ -16,4 +16,8 @@ let tasaInteres = parseFloat(document.getElementById("txtTasaInteres").value);
 
 let interesSimple = calcularInteresSimple(monto,plazo,tasaInteres);
 texto("spnInteresPagar",interesSimple);
+
+//CALCULAR TOTAL PRESTAMO
+let valorPagar = calcularTotalPagar(monto,interesSimple);
+texto("spnTotalPrestamo",valorPagar)
 }

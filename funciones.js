@@ -30,3 +30,8 @@ function calcularInteresSimple(monto,tasa,plazoAnios){
     let interes = monto * (tasa/100) * plazoAnios;
     return interes;
 }
+
+function calcularTotalPagar(monto,interes){
+let valorPagar= monto + interes + 100;
+return valorPagar;
+}
