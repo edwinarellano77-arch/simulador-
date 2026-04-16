@@ -34,3 +34,17 @@ if(aprobar == true){
     document.getElementById("spnEstadoCredito").innerText = "CREDITO RECHAZADO";
 }
 }
+
+function reiniciar(){
+    document.getElementById("txtIngresos").value = "";
+    document.getElementById("txtEgresos").value = "";
+    document.getElementById("txtMonto").value = "";
+    document.getElementById("txtPlazo").value = "";
+    document.getElementById("txtTasaInteres").value = "";
+    document.getElementById("spnDisponible").innerText = "—";
+    document.getElementById("spnCapacidadPago").innerText = "—";
+    document.getElementById("spnInteresPagar").innerText = "—";
+   document.getElementById("spnTotalPrestamo").innerText = "—";
+   document.getElementById("spnCuotaMensual").innerText = "—";
+   document.getElementById("spnEstadoCredito").innerText = "ANALIZANDO"
+}

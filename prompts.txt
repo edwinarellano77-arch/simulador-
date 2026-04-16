@@ -1,0 +1,10 @@
+// PROMPT N# 01
+
+Soy estudiante de 1er nivel de programacion web, de los archivos que te envie necesito que actues como tutor y me ayudes con lo siguiente:
+
+* variando el Css y el Html si es necesario, dale una imagen corporativa a este proyecto, tomando encuenta los siguientes aspectos:
+* Usa la imagen corporativa y los logos del Chace Bank de USA.
+* Requisitos importantes - responsive, aspecto empresarial.
+* no modifiques ni simulador.js ni funciones.js
+* los colores del chace bank es un azul predominante con combinaciones de azul mas tenues.
+* realiza un archivo Css con todo lo que solicitamos.
