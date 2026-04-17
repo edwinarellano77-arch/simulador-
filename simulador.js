@@ -1,19 +1,43 @@
 //AQUI EL JAVASCRIPT PARA MANIPULAR EL HTML
 
 function calcular() {
+document.getElementById("errIngresos").innerText = "";
+
 let ingresos = parseFloat(document.getElementById("txtIngresos").value);
+if(isNaN(ingresos)){
+   document.getElementById("errIngresos").innerText = "Campo obligatorio";
+    return;
+}
+document.getElementById("errEgresos").innerText = "";
 let egresos = parseFloat(document.getElementById("txtEgresos").value);
+if(isNaN(egresos)){
+   document.getElementById("errEgresos").innerText = "Campo obligatorio";
+    return;
+}
 let disponible = calcularDisponible(ingresos, egresos);
 texto("spnDisponible", disponible);
 let capasidadDePago = calcularCapacidadDePago(disponible);
 texto("spnCapacidadPago", capasidadDePago);
 
 //CALCULAR INTERES SIMPLE
-
+    document.getElementById("errMonto").innerText = "";
 let monto = parseFloat(document.getElementById("txtMonto").value);
+   if(isNaN(monto)){
+   document.getElementById("errMonto").innerText = "Campo obligatorio";
+    return;}
+    if(monto > 20000){
+   document.getElementById("errMonto").innerText = "Realizar Investigacion Nivel 02";
+    return;}     
+    document.getElementById("errPlazo").innerText = "";
 let plazo = parseFloat(document.getElementById("txtPlazo").value);
+   if(isNaN(monto)){
+   document.getElementById("errPlazo").innerText = "Campo obligatorio";
+    return;}
+   document.getElementById("errTasaInteres").innerText = "";
 let tasaInteres = parseFloat(document.getElementById("txtTasaInteres").value);
-
+if(isNaN(monto)){
+   document.getElementById("errTazaInteres").innerText = "Campo obligatorio";
+    return;}
 let interesSimple = calcularInteresSimple(monto,plazo,tasaInteres);
 texto("spnInteresPagar",interesSimple);
 
