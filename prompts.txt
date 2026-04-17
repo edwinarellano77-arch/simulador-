@@ -8,3 +8,62 @@ Soy estudiante de 1er nivel de programacion web, de los archivos que te envie ne
 * no modifiques ni simulador.js ni funciones.js
 * los colores del chace bank es un azul predominante con combinaciones de azul mas tenues.
 * realiza un archivo Css con todo lo que solicitamos.
+
+// PROMPT N# 02
+
+ok.. nos falta algo.. el boton reiniciar no reinicia.
+
+18:33
+¡Buena observación! 🎯
+
+El botón Reiniciar existe en el HTML pero nunca le asignamos una función.
+
+Mira el HTML:
+
+html
+<button id="btnReiniciar">Reiniciar</button>
+¿Ves la diferencia con el botón Calcular?
+
+html
+<button id="btnCalcularCredito" onclick="calcular()">Calcular Crédito</button>
+¿Qué le falta al botón Reiniciar? 🤔
+
+una funcion
+
+18:33
+¡Exacto! 💪
+
+Y esa función, ¿en cuál de los dos archivos debería ir? Recuerda:
+
+funciones.js → lógica matemática
+simulador.js → manipulación del HTML
+🤔
+
+en simulador
+
+18:34
+¡Correcto! 🎯
+
+Ahora piensa: ¿qué debe hacer la función reiniciar? ¿Qué elementos necesita limpiar? 🤔
+
+todos
+
+18:34
+¡Exacto! Todos los inputs y todos los spans.
+
+Mira cómo se muestra un valor en un span:
+
+javascript
+document.getElementById("spnDisponible").innerText = "—";
+Y para limpiar un input:
+
+javascript
+document.getElementById("txtIngresos").value = "";
+Intenta escribir la función reiniciar() limpiando todos los campos. Los ids son:
+
+Inputs: txtIngresos, txtEgresos, txtMonto, txtPlazo, txtTasaInteres
+
+Spans: spnDisponible, spnCapacidadPago, spnInteresPagar, spnTotalPrestamo, spnCuotaMensual, spnEstadoCredito
+
+Inténtalo. 🙂
+
