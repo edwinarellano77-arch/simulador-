@@ -1,0 +1,11 @@
+PROMPT N#01
+De los archivos que te entregue,
+ actua como un tutor de programacion y guiame a traves de las siguientes
+  caracteristicas: Ingresos No puede ser 0, no puede ser menor que 
+  egresos/Egresos, No puede ser 0/ Monto, Máximo $20,000, si excede 
+  sugerir investigación/ Plazo,Mínimo 1 año, máximo 3 años/
+  Tasa Mínimo 9%, máximo 16%/No pueden estar vacíos los 
+  cuadros de texto, caracteres inválidos ponen el campo en rojo 
+   los errores aparescan debajo de cada 
+  campo.
+no toques los archivos funciones.js el resto si es necesario si

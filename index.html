@@ -40,10 +40,23 @@
             <label for="txtIngresos">Ingresos mensuales</label>
             <input type="number" id="txtIngresos" placeholder="0.00">
                 <small id="errIngresos" style="color:red;"></small>
-            <label for="txtEgresos">Egresos mensuales</label>
-            <input type="number" id="txtEgresos" placeholder="0.00">
-                <small id="errEgresos" style="color:red;"></small>
+            <label for="txtArriendo">Arriendo</label>
+<input type="number" id="txtArriendo" placeholder="0.00">
+    <small id="errArriendo" style="color:red;"></small>
+
+<label for="txtAlimentacion">Alimentación</label>
+<input type="number" id="txtAlimentacion" placeholder="0.00">
+    <small id="errAlimentacion" style="color:red;"></small>
+
+<label for="txtVarios">Varios</label>
+<input type="number" id="txtVarios" placeholder="0.00">
+    <small id="errVarios" style="color:red;"></small>
             <div style="margin-top: 14px;">
+
+                <div class="resultado-fila">
+    <span class="resultado-label">Total gastos</span>
+    <span class="resultado-valor" id="spnTotalGastos">—</span>
+</div>
                 <div class="resultado-fila">
                     <span class="resultado-label">Disponible mensual</span>
                     <span class="resultado-valor" id="spnDisponible">—</span>

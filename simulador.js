@@ -2,18 +2,36 @@
 
 function calcular() {
 document.getElementById("errIngresos").innerText = "";
-
 let ingresos = parseFloat(document.getElementById("txtIngresos").value);
 if(isNaN(ingresos)){
    document.getElementById("errIngresos").innerText = "Campo obligatorio";
     return;
 }
-document.getElementById("errEgresos").innerText = "";
-let egresos = parseFloat(document.getElementById("txtEgresos").value);
-if(isNaN(egresos)){
-   document.getElementById("errEgresos").innerText = "Campo obligatorio";
+
+document.getElementById("errArriendo").innerText = "";
+let arriendo = parseFloat(document.getElementById("txtArriendo").value);
+if(isNaN(arriendo) || arriendo < 0){
+   document.getElementById("errArriendo").innerText = "Valor inválido";
     return;
 }
+
+document.getElementById("errAlimentacion").innerText = "";
+let alimentacion = parseFloat(document.getElementById("txtAlimentacion").value);
+if(isNaN(alimentacion) || alimentacion < 0){
+   document.getElementById("errAlimentacion").innerText = "Valor inválido";
+    return;
+}
+
+document.getElementById("errVarios").innerText = "";
+let varios = parseFloat(document.getElementById("txtVarios").value);
+if(isNaN(varios) || varios < 0){
+   document.getElementById("errVarios").innerText = "Valor inválido";
+    return;
+}
+
+let egresos = arriendo + alimentacion + varios;
+texto("spnTotalGastos", egresos);
+
 let disponible = calcularDisponible(ingresos, egresos);
 texto("spnDisponible", disponible);
 let capasidadDePago = calcularCapacidadDePago(disponible);
@@ -30,13 +48,13 @@ let monto = parseFloat(document.getElementById("txtMonto").value);
     return;}     
     document.getElementById("errPlazo").innerText = "";
 let plazo = parseFloat(document.getElementById("txtPlazo").value);
-   if(isNaN(monto)){
+   if(isNaN(plazo)){
    document.getElementById("errPlazo").innerText = "Campo obligatorio";
     return;}
    document.getElementById("errTasaInteres").innerText = "";
 let tasaInteres = parseFloat(document.getElementById("txtTasaInteres").value);
-if(isNaN(monto)){
-   document.getElementById("errTazaInteres").innerText = "Campo obligatorio";
+if(isNaN(tasaInteres)){
+   document.getElementById("errTasaInteres").innerText = "Campo obligatorio";
     return;}
 let interesSimple = calcularInteresSimple(monto,plazo,tasaInteres);
 texto("spnInteresPagar",interesSimple);
@@ -61,7 +79,9 @@ if(aprobar == true){
 
 function reiniciar(){
     document.getElementById("txtIngresos").value = "";
-    document.getElementById("txtEgresos").value = "";
+    document.getElementById("txtArriendo").value = "";
+document.getElementById("txtAlimentacion").value = "";
+document.getElementById("txtVarios").value = "";
     document.getElementById("txtMonto").value = "";
     document.getElementById("txtPlazo").value = "";
     document.getElementById("txtTasaInteres").value = "";
@@ -71,4 +91,5 @@ function reiniciar(){
    document.getElementById("spnTotalPrestamo").innerText = "—";
    document.getElementById("spnCuotaMensual").innerText = "—";
    document.getElementById("spnEstadoCredito").innerText = "ANALIZANDO"
+   document.getElementById("spnTotalGastos").innerText = "—";
 }
